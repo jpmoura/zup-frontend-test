@@ -3,10 +3,9 @@ Implementation of Zup Front-end developer
 
 ## Usage
 
-Run the command:
+Run ```npm install && npm start``` if you are using a UNIX environment or using CMD on Windows or run ```npm install | npm start``` if you are using PowerShell.
 
-```
-$ npm install && npm start
-```
+This command will compile the files in ```app``` folder into ```dist``` folder
+and when it's done will open the login page automatically.
 
-These commands will compile the files in 'app' folder into 'dist' folder.
+You can read the description of this test in Brazilian Portuguese in this [link](./testDescription.pdf).
