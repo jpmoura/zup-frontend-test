@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html ng-app="listPage">
+	<head>
+		<title>Zup Front-end Test - Login Page</title>
+		<!--build:css css/main.min.css-->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/main.css">
+		<!--endbuild-->
+
+	    <!--[if lt IE 9]>
+	      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+	      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+	</head>
+	<body ng-controller="listPageController">
+
+		<div class="container vertical-center">
+			<div class="col-xs-offset-3 col-xs-6">
+				<div class="row">
+                    <div class="input-group">
+                      <span class="input-group-addon">Search</span>
+                      <input type="text" value="" ng-model="searchText" ng-init="searchText=''" class="form-control" placeholder="Search for some data">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="table">
+                        <table class="table table-bordered table-striped table-responsive table-hover">
+                            <thead>
+                                <th>Name</th>
+                                <th>Phone</th>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="x in contacts | filter:searchText">
+                                    <td ng-repeat="(key, value) in x">
+                                        {{ value }}
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+			</div>
+		</div>
+
+		<!--build:js js/angular.min.js -->
+		<script src="js/angular/angular.min.js"></script>
+		<!-- endbuild -->
+
+		<script>
+			angular.module("listPage", []);
+			angular.module("listPage").controller("listPageController", function ($scope)
+			{
+				$scope.searchText = null;
+				$scope.contacts = [
+					{name: "Arthas", phone: "(31) 99999-0000"},
+					{name: "Thrall", phone: "(31) 99999-1111"},
+					{name: "Ezio", phone: "(31) 99999-2222"},
+					{name: "Quill", phone: "(31) 99999-3333"},
+					{name: "Bruce", phone: "(31) 99999-4444"},
+					{name: "Clark", phone: "(31) 99999-5555"},
+					{name: "Wade", phone: "(31) 99999-6666"},
+					{name: "Logan", phone: "(31) 99999-7777"},
+					{name: "Charles", phone: "(31) 99999-8888"},
+					{name: "Erik", phone: "(31) 99999-9999"}
+				];
+			});
+		</script>
+
+		<!--build:js js/main.min.js -->
+		<script src="js/jquery/jquery.min.js"></script>
+	    <script src="js/bootstrap/bootstrap.min.js"></script>
+		<!-- endbuild -->
+	</body>
+</html>

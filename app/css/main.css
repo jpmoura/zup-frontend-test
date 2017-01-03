@@ -1,0 +1,44 @@
+body {
+    color: #989898;
+    background: #4b2d49; /* For browsers that do not support gradients */
+    background: -webkit-radial-gradient(circle, #4b2d49, #300f33); /* Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(circle, #4b2d49, #300f33); /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(circle, #4b2d49, #300f33); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(circle, #4b2d49, #300f33); /* Standard syntax */
+}
+
+.panel-zup {
+    background-color: #663366;
+    color: white;
+}
+
+.panel-heading-zup {
+    padding: 25px 15px;
+}
+
+.panel-body-zup {
+    background-color: #f2f2f2;
+    color: #989898;
+}
+
+.btn-singin-zup {
+    background-color: #774d7a;
+    color: white;
+}
+
+.btn-singin-zup:hover {
+    background-color: #4b2d49;
+    color: white;
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+a {
+    color: inherit;
+}
